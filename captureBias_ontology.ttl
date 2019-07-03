@@ -1,0 +1,184 @@
+@base <http://capturebias.wordpress.com/rdf/schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ytmdv: <http://capturebias.wordpress.com/rdf/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a owl:Ontology ;
+    rdfs:label "YouTube Metadata Ontology"@en ;
+    rdfs:comment "YouTube metadata ontology developed by the Vrije Universiteit Amsterdam during the course of the Capture Bias project"@en ;
+    dc:creator "Wilcke WX"^^xsd:string ;
+    rdfs:seeAlso "https://capturebias.wordpress.com"^^xsd:anyURI .
+
+
+## Classes
+
+<Channel> a owl:Class ;
+    owl:subClassOf foaf:OnlineAccount ;
+    rdfs:label "YouTube Channel"@en ;
+    rdfs:comment "A YouTube channel containing zero or more videos"@en .
+
+<Video> a owl:Class ;
+    owl:subClassOf foaf:Document ;
+    rdfs:label "YouTube Video Post"@en ;
+    rdfs:comment "A YouTube video post published by a user or channel"@en .
+
+<UserAccount> a owl:Class ;
+    owl:subClassOf foaf:OnlineAccount ;
+    rdfs:label "YouTube User Account"@en ;
+    rdfs:comment "A user account on YouTube"@en .
+
+<ISO8601> a rdfs:Datatype ;
+    rdfs:label "ISO8601 Duration"@en ;
+    rdfs:comment "Duration according to the ISO8601 specification"@en ;
+    owl:equivalentClass [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:anyAtomicType ;
+        owl:withRestrictions [
+            xsd:pattern "[0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]+)?)?(Z|(\+|-)[0-9]{2}:[0-9]{2}))?)?)?"
+            ]
+        ] .
+
+## Object Properties
+
+<published> a owl:ObjectProperty ;
+    rdfs:label "published"@en ;
+    rdfs:comment "A channel published a video"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range <Video> ;
+    owl:inverseOf <published_by> .
+
+<published_by> a owl:ObjectProperty ;
+    rdfs:label "published by"@en ;
+    rdfs:comment "A video was published by a channel"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range <Channel> ;
+    owl:inverseOf <published> .
+
+<category> a owl:ObjectProperty ;
+    owl:subPropertyOf dcterms:subject ;
+    rdfs:label "category"@en ;
+    rdfs:comment "A video content fits into a YouTube category"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range ytmdv:Categories .
+
+<operates_from> a owl:ObjectProperty ;
+    rdfs:label "operates from"@en ;
+    rdfs:comment "A channel operates from this location"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range gn:Feature .
+
+<blocked_in> a owl:ObjectProperty ;
+    rdfs:label "blocked in"@en ;
+    rdfs:comment "Viewers from zero or more locations can be blocked from viewing a video"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range gn:Feature .
+
+<allowed_in> a owl:ObjectProperty ;
+    rdfs:label "allowed in"@en ;
+    rdfs:comment "Viewers from zero or more locations can be allowed from viewing a video"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range gn:Feature .
+
+<dimension> a owl:ObjectProperty ;
+    rdfs:label "has video dimension"@en ;
+    rdfs:comment "A video has a certain dimension"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range ytmdv:ContentDetails .
+
+<content_rating> a owl:ObjectProperty ;
+    rdfs:label "has content rating"@en ;
+    rdfs:comment "A video has zero or more content ratings"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range ytmdv:ContentRating .
+
+<thumbnail> a owl:ObjectProperty ;
+    owl:subPropertyOf foaf:depiction ;
+    owl:inverseOf <thumbnail_of> ;
+    rdfs:label "has thumbnail"@en ;
+    rdfs:comment "A thumbnail associated with a channel or video"@en ;
+    rdfs:domain [ owl:unionOf ( <Channel> <Video> ) ] ;
+    rdfs:range foaf:Image .
+
+<thumbnail_of> a owl:ObjectProperty ;
+    owl:subPropertyOf foaf:depicts ;
+    owl:inverseOf <thumbnail> ;
+    rdfs:label "thumbnail of"@en ;
+    rdfs:comment "A channel or video associated with an thumbnail"@en ;
+    rdfs:domain foaf:Image ;
+    rdfs:range [ owl:unionOf ( <Channel> <Video> ) ] .
+
+## Datatype Properties
+
+<num_comments> a owl:DatatypeProperty ;
+    rdfs:label "number of comments"@en ;
+    rdfs:comment "The number of comments a video or channel has"@en ;
+    rdfs:domain [ owl:unionOf ( <Channel> <Video> ) ] ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_likes> a owl:DatatypeProperty ;
+    rdfs:label "number of likes"@en ;
+    rdfs:comment "The number of likes a video has"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_dislikes> a owl:DatatypeProperty ;
+    rdfs:label "number of dislikes"@en ;
+    rdfs:comment "The number of dislikes a video has"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_views> a owl:DatatypeProperty ;
+    rdfs:label "number of views"@en ;
+    rdfs:comment "The number of views a video has"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_favored> a owl:DatatypeProperty ;
+    rdfs:label "favorited count"@en ;
+    rdfs:comment "The number of users who favorited a video"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_subscribers> a owl:DatatypeProperty ;
+    rdfs:label "number of subscribers"@en ;
+    rdfs:comment "The number of subscribers a channel has"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<num_videos> a owl:DatatypeProperty ;
+    rdfs:label "number of videos"@en ;
+    rdfs:comment "The number of videos a channel has"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range xsd:nonNegativeInteger .
+
+<moderated> a owl:DatatypeProperty ;
+    rdfs:label "moderated"@en ;
+    rdfs:comment "A channel may or may not moderate comments placed by viewers"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range xsd:boolean .
+
+<keyword> a owl:DatatypeProperty ;
+    owl:subPropertyOf dc:subject ;
+    rdfs:label "keyword"@en ;
+    rdfs:comment "A channel can have zero or more keywords associated with it"@en ;
+    rdfs:domain <Channel> ;
+    rdfs:range xsd:string .
+
+<tag> a owl:DatatypeProperty ;
+    owl:subPropertyOf dc:subject ;
+    rdfs:label "tag"@en ;
+    rdfs:comment "A video can have zero or more tags associated with it"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range xsd:string .
+
+<duration> a owl:DatatypeProperty ;
+    rdfs:label "duration"@en ;
+    rdfs:comment "Duration of video in ISO8601 format"@en ;
+    rdfs:domain <Video> ;
+    rdfs:range <ISO8601> .

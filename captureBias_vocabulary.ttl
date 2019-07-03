@@ -1,0 +1,2886 @@
+@prefix : <http://capturebias.wordpress.com/rdf/vocab#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+## Categories
+
+:Categories a skos:ConceptScheme;
+    dc:title "YouTube Video Categories"@en ;
+    dc:creator "Wilcke WX"^^xsd:string .
+
+:Action_and_Adventure a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Action/Adventure"@en .
+
+:Anime_and_Animation a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Anime/Animation"@en .
+
+:Autos_and_Vehicles a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Autos & Vehicles"@en .
+
+:Classics a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Classics"@en .
+
+:Comedy a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Comedy"@en .
+
+:Documentary a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Documentary"@en .
+
+:Drama a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Drama"@en .
+
+:Education a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Education"@en .
+
+:Entertainment a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Entertainment"@en .
+
+:Family a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Family"@en .
+
+:Film_and_Animation a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Film & Animation"@en .
+
+:Foreign a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Foreign"@en .
+
+:Gaming a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Gaming"@en .
+
+:Horror a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Horror"@en .
+
+:Howto_and_Style a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Howto & Style"@en .
+
+:Movies a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Movies"@en .
+
+:Music a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Music"@en .
+
+:News_and_Politics a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "News & Politics"@en .
+
+:Nonprofits_and_Activism a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Nonprofits & Activism"@en .
+
+:People_and_Blogs a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "People & Blogs"@en .
+
+:Pets_and_Animals a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Pets & Animals"@en .
+
+:SciFi_and_Fantasy a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Sci-Fi/Fantasy"@en .
+
+:Science_and_Technology a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Science & Technology"@en .
+
+:Short_Movies a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Short Movies"@en .
+
+:Shorts a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Shorts"@en .
+
+:Shows a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Shows"@en .
+
+:Sports a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Sports"@en .
+
+:Thriller a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Thriller"@en .
+
+:Trailers a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Trailers"@en .
+
+:Travel_and_Events a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Travel & Events"@en .
+
+:Videoblogging a skos:Concept ;
+    skos:inSchema :Categories ;
+    skos:prefLabel "Videoblogging"@en .
+
+
+## ContentDetails
+
+:ContentDetails a skos:ConceptScheme;
+    dc:title "YouTube Video Content Details"@en ;
+    dc:creator "Wilcke WX"^^xsd:string .
+
+:TwoDimensional a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "2D"@en .
+
+:ThreeDimensional a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "3D"@en .
+
+:StandardDefinition a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "SD"@en .
+
+:HighDefinition a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "HD"@en .
+
+:SphericalProjection a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "360°"@en .
+
+:RectangularProjection a skos:Concept ;
+    skos:inSchema :ContentDetails ;
+    skos:prefLabel "Rectangular"@en .
+
+
+##  ContentRating
+
+:ContentRatings a skos:ConceptScheme;
+    dc:title "YouTube Video Content Ratings"@en ;
+    dc:creator "Wilcke WX"^^xsd:string .
+
+:ACBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :acbC,
+        :acbE,
+        :acbG,
+        :acbM,
+        :acbMa15plus,
+        :acbP,
+        :acbPg,
+        :acbR18plus,
+        :acbUnrated ;
+    skos:note "The video's Australian Classification Board (ACB) or Australian Communications and Media Authority (ACMA) rating. ACMA ratings are used to classify children's television programming."@en ;
+    skos:prefLabel "acbRating:"@en .
+
+:AGCOMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :agcomT,
+        :agcomUnrated,
+        :agcomVm14,
+        :agcomVm18 ;
+    skos:note "The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM)."@en ;
+    skos:prefLabel "agcomRating:"@en .
+
+:ANATELrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :anatelA,
+        :anatelF,
+        :anatelI,
+        :anatelI10,
+        :anatelI12,
+        :anatelI7,
+        :anatelR,
+        :anatelUnrated ;
+    skos:note "The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television."@en ;
+    skos:prefLabel "anatelRating:"@en .
+
+:BBFCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :bbfc12,
+        :bbfc12a,
+        :bbfc15,
+        :bbfc18,
+        :bbfcPg,
+        :bbfcR18,
+        :bbfcU,
+        :bbfcUnrated ;
+    skos:note "The video's British Board of Film Classification (BBFC) rating."@en ;
+    skos:prefLabel "bbfcRating:"@en .
+
+:BFVCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :bfvc13,
+        :bfvc15,
+        :bfvc18,
+        :bfvc20,
+        :bfvcB,
+        :bfvcE,
+        :bfvcG,
+        :bfvcUnrated ;
+    skos:note "The video's rating from Thailand's Board of Film and Video Censors."@en ;
+    skos:prefLabel "bfvcRating:"@en .
+
+:BMUKKrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :bmukk10,
+        :bmukk12,
+        :bmukk14,
+        :bmukk16,
+        :bmukk6,
+        :bmukk8,
+        :bmukkAa,
+        :bmukkUnrated ;
+    skos:note "The video's rating from the Austrian Board of Media Classification (Bundesministerium für Unterricht, Kunst und Kultur)."@en ;
+    skos:prefLabel "bmukkRating:"@en .
+
+:CATVFRrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :catvfr13plus,
+        :catvfr16plus,
+        :catvfr18plus,
+        :catvfr8plus,
+        :catvfrG,
+        :catvfrUnrated ;
+    skos:note "The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian French-language broadcasts. For more information, see the Canadian Broadcast Standards Council website."@en ;
+    skos:prefLabel "catvfrRating:"@en .
+
+:CATVrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :catv14plus,
+        :catv18plus,
+        :catvC,
+        :catvC8,
+        :catvG,
+        :catvPg,
+        :catvUnrated ;
+    skos:note "Rating system for Canadian TV - Canadian TV Classification System The video's rating from the Canadian Radio-Television and Telecommunications Commission (CRTC) for Canadian English-language broadcasts. For more information, see the Canadian Broadcast Standards Council website."@en ;
+    skos:prefLabel "catvRating:"@en .
+
+:CBFCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cbfcA,
+        :cbfcS,
+        :cbfcU,
+        :cbfcUA,
+        :cbfcUnrated ;
+    skos:note "The video's Central Board of Film Certification (CBFC - India) rating."@en ;
+    skos:prefLabel "cbfcRating:"@en .
+
+:CCCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :ccc14,
+        :ccc18,
+        :ccc18s,
+        :ccc18v,
+        :ccc6,
+        :cccTe,
+        :cccUnrated ;
+    skos:note "The video's Consejo de Calificación Cinematográfica (Chile) rating."@en ;
+    skos:prefLabel "cccRating:"@en .
+
+:CCErating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cceM12,
+        :cceM14,
+        :cceM16,
+        :cceM18,
+        :cceM4,
+        :cceM6,
+        :cceUnrated ;
+    skos:note "The video's rating from Portugal's Comissão de Classificação de Espect´culos."@en ;
+    skos:prefLabel "cceRating:"@en .
+
+:CHFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :chfilm0,
+        :chfilm12,
+        :chfilm16,
+        :chfilm18,
+        :chfilm6,
+        :chfilmUnrated ;
+    skos:note "The video's rating in Switzerland."@en ;
+    skos:prefLabel "chfilmRating:"@en .
+
+:CHVRSrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :chvrs14a,
+        :chvrs18a,
+        :chvrsE,
+        :chvrsG,
+        :chvrsPg,
+        :chvrsR,
+        :chvrsUnrated ;
+    skos:note "The video's Canadian Home Video Rating System (CHVRS) rating."@en ;
+    skos:prefLabel "chvrsRating:"@en .
+
+:CICFrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cicfE,
+        :cicfKntEna,
+        :cicfKtEa,
+        :cicfUnrated ;
+    skos:note "The video's rating from the Commission de Contrôle des Films (Belgium)."@en ;
+    skos:prefLabel "cicfRating:"@en .
+
+:CNArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cna12,
+        :cna15,
+        :cna18,
+        :cna18plus,
+        :cnaAp,
+        :cnaUnrated ;
+    skos:note "The video's rating from Romania's CONSILIUL NATIONAL AL AUDIOVIZUALULUI (CNA)."@en ;
+    skos:prefLabel "cnaRating:"@en .
+
+:CNCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cnc10,
+        :cnc12,
+        :cnc16,
+        :cnc18,
+        :cncE,
+        :cncInterdiction,
+        :cncT,
+        :cncUnrated ;
+    skos:note "Rating system in France - Commission de classification cinematographique"@en ;
+    skos:prefLabel "cncRating:"@en .
+
+:CSArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :csa10,
+        :csa12,
+        :csa16,
+        :csa18,
+        :csaInterdiction,
+        :csaT,
+        :csaUnrated ;
+    skos:note "The video's rating from France's Conseil supérieur de l?audiovisuel, which rates broadcast content."@en ;
+    skos:prefLabel "csaRating:"@en .
+
+:CSCFrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :cscf12,
+        :cscf16,
+        :cscf18,
+        :cscf6,
+        :cscf9,
+        :cscfA,
+        :cscfAl,
+        :cscfUnrated ;
+    skos:note "The video's rating from Luxembourg's Commission de surveillance de la classification des films (CSCF)."@en ;
+    skos:prefLabel "cscfRating:"@en .
+
+:CZFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :czfilm12,
+        :czfilm14,
+        :czfilm18,
+        :czfilmU,
+        :czfilmUnrated ;
+    skos:note "The video's rating in the Czech Republic."@en ;
+    skos:prefLabel "czfilmRating:"@en .
+
+:DJCTQrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :djctq10,
+        :djctq1012,
+        :djctq1014,
+        :djctq1016,
+        :djctq1018,
+        :djctq12,
+        :djctq1214,
+        :djctq1216,
+        :djctq1218,
+        :djctq14,
+        :djctq1416,
+        :djctq1418,
+        :djctq16,
+        :djctq1618,
+        :djctq18,
+        :djctqEr,
+        :djctqL,
+        :djctqL10,
+        :djctqL12,
+        :djctqL14,
+        :djctqL16,
+        :djctqL18,
+        :djctqUnrated ;
+    skos:note "The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil) rating."@en ;
+    skos:prefLabel "djctqRating:"@en .
+
+:ECBMCTrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :ecbmct13a,
+        :ecbmct13plus,
+        :ecbmct15a,
+        :ecbmct15plus,
+        :ecbmct18plus,
+        :ecbmct7a,
+        :ecbmct7plus,
+        :ecbmctG,
+        :ecbmctUnrated ;
+    skos:note "Rating system in Turkey - Evaluation and Classification Board of the Ministry of Culture and Tourism"@en ;
+    skos:prefLabel "ecbmctRating:"@en .
+
+:EEFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :eefilmK12,
+        :eefilmK14,
+        :eefilmK16,
+        :eefilmK6,
+        :eefilmL,
+        :eefilmMs12,
+        :eefilmMs6,
+        :eefilmPere,
+        :eefilmUnrated ;
+    skos:note "The video's rating in Estonia."@en ;
+    skos:prefLabel "eefilmRating:"@en .
+
+:EGFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :egfilm18,
+        :egfilmBn,
+        :egfilmGn,
+        :egfilmUnrated ;
+    skos:note "The video's rating in Egypt."@en ;
+    skos:prefLabel "egfilmRating:"@en .
+
+:EIRINrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :eirinG,
+        :eirinPg12,
+        :eirinR15plus,
+        :eirinR18plus,
+        :eirinUnrated ;
+    skos:note "The video's Eirin (映倫) rating. Eirin is the Japanese rating system."@en ;
+    skos:prefLabel "eirinRating:"@en .
+
+:FCBMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :fcbm18,
+        :fcbm18pa,
+        :fcbm18pl,
+        :fcbm18sg,
+        :fcbm18sx,
+        :fcbmP13,
+        :fcbmPg13,
+        :fcbmU,
+        :fcbmUnrated ;
+    skos:note "The video's rating from Malaysia's Film Censorship Board."@en ;
+    skos:prefLabel "fcbmRating:"@en .
+
+:FCOrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :fcoI,
+        :fcoIi,
+        :fcoIia,
+        :fcoIib,
+        :fcoIii,
+        :fcoUnrated ;
+    skos:note "The video's rating from Hong Kong's Office for Film, Newspaper and Article Administration."@en ;
+    skos:prefLabel "fcoRating:"@en .
+
+:FMOCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :fmoc10,
+        :fmoc12,
+        :fmoc16,
+        :fmoc18,
+        :fmocE,
+        :fmocU,
+        :fmocUnrated ;
+    skos:note "This property has been deprecated. Use the contentDetails.contentRating.cncRating instead."@en ;
+    skos:prefLabel "fmocRating:"@en .
+
+:FPBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :fpb10,
+        :fpb1012Pg,
+        :fpb13,
+        :fpb16,
+        :fpb18,
+        :fpb79Pg,
+        :fpbA,
+        :fpbPg,
+        :fpbUnrated,
+        :fpbX18,
+        :fpbXx ;
+    skos:note "The video's rating from South Africa's Film and Publication Board."@en ;
+    skos:prefLabel "fpbRating:"@en .
+
+:FSKrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :fsk0,
+        :fsk12,
+        :fsk16,
+        :fsk18,
+        :fsk6,
+        :fskUnrated ;
+    skos:note "The video's Freiwillige Selbstkontrolle der Filmwirtschaft (FSK - Germany) rating."@en ;
+    skos:prefLabel "fskRating:"@en .
+
+:GRFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :grfilmE,
+        :grfilmK,
+        :grfilmK12,
+        :grfilmK13,
+        :grfilmK15,
+        :grfilmK17,
+        :grfilmK18,
+        :grfilmUnrated ;
+    skos:note "The video's rating in Greece."@en ;
+    skos:prefLabel "grfilmRating:"@en .
+
+:ICAArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :icaa12,
+        :icaa13,
+        :icaa16,
+        :icaa18,
+        :icaa7,
+        :icaaApta,
+        :icaaUnrated,
+        :icaaX ;
+    skos:note "The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating."@en ;
+    skos:prefLabel "icaaRating:"@en .
+
+:IFCOrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :ifco12,
+        :ifco12a,
+        :ifco15,
+        :ifco15a,
+        :ifco16,
+        :ifco18,
+        :ifcoG,
+        :ifcoPg,
+        :ifcoUnrated ;
+    skos:note "The video's Irish Film Classification Office (IFCO - Ireland) rating. See the IFCO website for more information."@en ;
+    skos:prefLabel "ifcoRating:"@en .
+
+:ILFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :ilfilm12,
+        :ilfilm14,
+        :ilfilm16,
+        :ilfilm18,
+        :ilfilmAa,
+        :ilfilmUnrated ;
+    skos:note "The video's rating in Israel."@en ;
+    skos:prefLabel "ilfilmRating:"@en .
+
+:INCAArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :incaaAtp,
+        :incaaC,
+        :incaaSam13,
+        :incaaSam16,
+        :incaaSam18,
+        :incaaUnrated ;
+    skos:note "The video's INCAA (Instituto Nacional de Cine y Artes Audiovisuales - Argentina) rating."@en ;
+    skos:prefLabel "incaaRating:"@en .
+
+:KFCBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :kfcb16plus,
+        :kfcbG,
+        :kfcbPg,
+        :kfcbR,
+        :kfcbUnrated ;
+    skos:note "The video's rating from the Kenya Film Classification Board."@en ;
+    skos:prefLabel "kfcbRating:"@en .
+
+:KIJKWIJZERrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :kijkwijzer12,
+        :kijkwijzer16,
+        :kijkwijzer18,
+        :kijkwijzer6,
+        :kijkwijzer9,
+        :kijkwijzerAl,
+        :kijkwijzerUnrated ;
+    skos:note "voor de Classificatie van Audiovisuele Media (Netherlands)."@en ;
+    skos:prefLabel "kijkwijzerRating:"@en .
+
+:KMRBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :kmrb12plus,
+        :kmrb15plus,
+        :kmrbAll,
+        :kmrbR,
+        :kmrbTeenr,
+        :kmrbUnrated ;
+    skos:note "The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea."@en ;
+    skos:prefLabel "kmrbRating:"@en .
+
+:LSFrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :lsf13,
+        :lsf17,
+        :lsf21,
+        :lsfA,
+        :lsfBo,
+        :lsfD,
+        :lsfR,
+        :lsfSu,
+        :lsfUnrated ;
+    skos:note "The video's rating from Indonesia's Lembaga Sensor Film."@en ;
+    skos:prefLabel "lsfRating:"@en .
+
+:MCCAArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mccaa12,
+        :mccaa12a,
+        :mccaa14,
+        :mccaa15,
+        :mccaa16,
+        :mccaa18,
+        :mccaaPg,
+        :mccaaU,
+        :mccaaUnrated ;
+    skos:note "The video's rating from Malta's Film Age-Classification Board."@en ;
+    skos:prefLabel "mccaaRating:"@en .
+
+:MCCYPrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mccyp11,
+        :mccyp15,
+        :mccyp7,
+        :mccypA,
+        :mccypUnrated ;
+    skos:note "The video's rating from the Danish Film Institute's (Det Danske Filminstitut) Media Council for Children and Young People."@en ;
+    skos:prefLabel "mccypRating:"@en .
+
+:MCSTrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mcst0,
+        :mcst16plus,
+        :mcstC13,
+        :mcstC16,
+        :mcstC18,
+        :mcstGPg,
+        :mcstP,
+        :mcstUnrated ;
+    skos:note "The video's rating system for Vietnam - MCST"@en ;
+    skos:prefLabel "mcstRating:"@en .
+
+:MDArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mdaG,
+        :mdaM18,
+        :mdaNc16,
+        :mdaPg,
+        :mdaPg13,
+        :mdaR21,
+        :mdaUnrated ;
+    skos:note "The video's rating from Singapore's Media Development Authority (MDA) and, specifically, it's Board of Film Censors (BFC)."@en ;
+    skos:prefLabel "mdaRating:"@en .
+
+:MEDIETILSYNETrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :medietilsynet11,
+        :medietilsynet12,
+        :medietilsynet15,
+        :medietilsynet18,
+        :medietilsynet6,
+        :medietilsynet7,
+        :medietilsynet9,
+        :medietilsynetA,
+        :medietilsynetUnrated ;
+    skos:note "The video's rating from Medietilsynet, the Norwegian Media Authority."@en ;
+    skos:prefLabel "medietilsynetRating:"@en .
+
+:MEKUrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :meku12,
+        :meku16,
+        :meku18,
+        :meku7,
+        :mekuS,
+        :mekuUnrated ;
+    skos:note "The video's rating from Finland's Kansallinen Audiovisuaalinen Instituutti (National Audiovisual Institute)."@en ;
+    skos:prefLabel "mekuRating:"@en .
+
+:MENAMPAArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :menaMpaaG,
+        :menaMpaaPg,
+        :menaMpaaPg13,
+        :menaMpaaR,
+        :menaMpaaUnrated ;
+    skos:note "The rating system for MENA countries, a clone of MPAA. It is needed to"@en ;
+    skos:prefLabel "menaMpaaRating:"@en .
+
+:MIBACrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mibacT,
+        :mibacUnrated,
+        :mibacVap,
+        :mibacVm12,
+        :mibacVm14,
+        :mibacVm18 ;
+    skos:note "The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo (Italy)."@en ;
+    skos:prefLabel "mibacRating:"@en .
+
+:MOCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :moc12,
+        :moc15,
+        :moc18,
+        :moc7,
+        :mocBanned,
+        :mocE,
+        :mocT,
+        :mocUnrated,
+        :mocX ;
+    skos:note "The video's Ministerio de Cultura (Colombia) rating."@en ;
+    skos:prefLabel "mocRating:"@en .
+
+:MOCTWrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :moctwG,
+        :moctwP,
+        :moctwPg,
+        :moctwR,
+        :moctwR12,
+        :moctwR15,
+        :moctwUnrated ;
+    skos:note "The video's rating from Taiwan's Ministry of Culture (文化部)."@en ;
+    skos:prefLabel "moctwRating:"@en .
+
+:MPAArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mpaaG,
+        :mpaaNc17,
+        :mpaaPg,
+        :mpaaPg13,
+        :mpaaR,
+        :mpaaUnrated,
+        :mpaaX ;
+    skos:note "The video's Motion Picture Association of America (MPAA) rating."@en ;
+    skos:prefLabel "mpaaRating:"@en .
+
+:MPAATrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mpaatGb,
+        :mpaatRb ;
+    skos:note "The rating system for trailer, DVD, and Ad in the US. See http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html."@en ;
+    skos:prefLabel "mpaatRating:"@en .
+
+:MTRCBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :mtrcbG,
+        :mtrcbPg,
+        :mtrcbR13,
+        :mtrcbR16,
+        :mtrcbR18,
+        :mtrcbUnrated,
+        :mtrcbX ;
+    skos:note "The video's rating from the Movie and Television Review and Classification Board (Philippines)."@en ;
+    skos:prefLabel "mtrcbRating:"@en .
+
+:NBCPLrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :nbcpl18plus,
+        :nbcplI,
+        :nbcplIi,
+        :nbcplIii,
+        :nbcplIv,
+        :nbcplUnrated ;
+    skos:note "The video's rating in Poland."@en ;
+    skos:prefLabel "nbcplRating:"@en .
+
+:NBCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :nbc12plus,
+        :nbc15plus,
+        :nbc18plus,
+        :nbc18plusr,
+        :nbcG,
+        :nbcPg,
+        :nbcPu,
+        :nbcUnrated ;
+    skos:note "The video's rating from the Maldives National Bureau of Classification."@en ;
+    skos:prefLabel "nbcRating:"@en .
+
+:NFRCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :nfrcA,
+        :nfrcB,
+        :nfrcC,
+        :nfrcD,
+        :nfrcUnrated,
+        :nfrcX ;
+    skos:note "The video's rating from the Bulgarian National Film Center."@en ;
+    skos:prefLabel "nfrcRating:"@en .
+
+:NFVCBrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :nfvcb12,
+        :nfvcb12a,
+        :nfvcb15,
+        :nfvcb18,
+        :nfvcbG,
+        :nfvcbPg,
+        :nfvcbRe,
+        :nfvcbUnrated ;
+    skos:note "The video's rating from Nigeria's National Film and Video Censors Board."@en ;
+    skos:prefLabel "nfvcbRating:"@en .
+
+:NKCLVrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :nkclv12plus,
+        :nkclv18plus,
+        :nkclv7plus,
+        :nkclvU,
+        :nkclvUnrated ;
+    skos:note "The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia)."@en ;
+    skos:prefLabel "nkclvRating:"@en .
+
+:OFLCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :oflcG,
+        :oflcM,
+        :oflcPg,
+        :oflcR13,
+        :oflcR15,
+        :oflcR16,
+        :oflcR18,
+        :oflcRp13,
+        :oflcRp16,
+        :oflcRp18,
+        :oflcUnrated ;
+    skos:note "The video's Office of Film and Literature Classification (OFLC - New Zealand) rating."@en ;
+    skos:prefLabel "oflcRating:"@en .
+
+:PEFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :pefilm14,
+        :pefilm18,
+        :pefilmPg,
+        :pefilmPt,
+        :pefilmUnrated ;
+    skos:note "The video's rating in Peru."@en ;
+    skos:prefLabel "pefilmRating:"@en .
+
+:RCNOFrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :rcnofI,
+        :rcnofIi,
+        :rcnofIii,
+        :rcnofIv,
+        :rcnofUnrated,
+        :rcnofV,
+        :rcnofVi ;
+    skos:note "The video's rating from the Hungarian Nemzeti Filmiroda, the Rating Committee of the National Office of Film."@en ;
+    skos:prefLabel "rcnofRating:"@en .
+
+:RESORTEVIOLENCIArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :resorteviolenciaA,
+        :resorteviolenciaB,
+        :resorteviolenciaC,
+        :resorteviolenciaD,
+        :resorteviolenciaE,
+        :resorteviolenciaUnrated ;
+    skos:note "The video's rating in Venezuela."@en ;
+    skos:prefLabel "resorteviolenciaRating:"@en .
+
+:RTCrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :rtcA,
+        :rtcAa,
+        :rtcB,
+        :rtcB15,
+        :rtcC,
+        :rtcD,
+        :rtcUnrated ;
+    skos:note "The video's General Directorate of Radio, Television and Cinematography (Mexico) rating."@en ;
+    skos:prefLabel "rtcRating:"@en .
+
+:RTErating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :rteCh,
+        :rteGa,
+        :rteMa,
+        :rtePs,
+        :rteUnrated ;
+    skos:note "The video's rating from Ireland's Raidió Teilifís Éireann."@en ;
+    skos:prefLabel "rteRating:"@en .
+
+:RUSSIArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :russia0,
+        :russia12,
+        :russia16,
+        :russia18,
+        :russia6,
+        :russiaUnrated ;
+    skos:note "The video's National Film Registry of the Russian Federation (MKRF - Russia) rating."@en ;
+    skos:prefLabel "russiaRating:"@en .
+
+:SKFILMrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :skfilmG,
+        :skfilmP2,
+        :skfilmP5,
+        :skfilmP8,
+        :skfilmUnrated ;
+    skos:note "The video's rating in Slovakia."@en ;
+    skos:prefLabel "skfilmRating:"@en .
+
+:SMAISrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :smais12,
+        :smais14,
+        :smais16,
+        :smais18,
+        :smais7,
+        :smaisL,
+        :smaisUnrated ;
+    skos:note "The video's rating in Iceland."@en ;
+    skos:prefLabel "smaisRating:"@en .
+
+:SMSArating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :smsa11,
+        :smsa15,
+        :smsa7,
+        :smsaA,
+        :smsaUnrated ;
+    skos:note "The video's rating from Statens medieråd (Sweden's National Media Council)."@en ;
+    skos:prefLabel "smsaRating:"@en .
+
+:TVPGrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :pg14,
+        :tvpgG,
+        :tvpgMa,
+        :tvpgPg,
+        :tvpgUnrated,
+        :tvpgY,
+        :tvpgY7,
+        :tvpgY7Fv ;
+    skos:note "The video's TV Parental Guidelines (TVPG) rating."@en ;
+    skos:prefLabel "tvpgRating:"@en .
+
+:YTrating a skos:Collection ;
+    skos:inScheme :ContentRatings ;
+    skos:member :ytAgeRestricted, ;
+    skos:note "A rating that YouTube uses to identify age-restricted content."@en ;
+    skos:prefLabel "ytRating:"@en .
+
+:acbC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbC"^^xsd:string .
+
+:acbE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbE"^^xsd:string .
+
+:acbG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbG"^^xsd:string .
+
+:acbM a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbM"^^xsd:string .
+
+:acbMa15plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbMa15plus"^^xsd:string .
+
+:acbP a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbP"^^xsd:string .
+
+:acbPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbPg"^^xsd:string .
+
+:acbR18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbR18plus"^^xsd:string .
+
+:acbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "acbUnrated"^^xsd:string .
+
+:agcomT a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "agcomT"^^xsd:string .
+
+:agcomUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "agcomUnrated"^^xsd:string .
+
+:agcomVm14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "agcomVm14"^^xsd:string .
+
+:agcomVm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "agcomVm18"^^xsd:string .
+
+:anatelA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelA"^^xsd:string .
+
+:anatelF a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelF"^^xsd:string .
+
+:anatelI a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelI"^^xsd:string .
+
+:anatelI10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelI10"^^xsd:string .
+
+:anatelI12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelI12"^^xsd:string .
+
+:anatelI7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelI7"^^xsd:string .
+
+:anatelR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelR"^^xsd:string .
+
+:anatelUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "anatelUnrated"^^xsd:string .
+
+:bbfc12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfc12"^^xsd:string .
+
+:bbfc12a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfc12a"^^xsd:string .
+
+:bbfc15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfc15"^^xsd:string .
+
+:bbfc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfc18"^^xsd:string .
+
+:bbfcPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfcPg"^^xsd:string .
+
+:bbfcR18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfcR18"^^xsd:string .
+
+:bbfcU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfcU"^^xsd:string .
+
+:bbfcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bbfcUnrated"^^xsd:string .
+
+:bfvc13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvc13"^^xsd:string .
+
+:bfvc15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvc15"^^xsd:string .
+
+:bfvc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvc18"^^xsd:string .
+
+:bfvc20 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvc20"^^xsd:string .
+
+:bfvcB a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvcB"^^xsd:string .
+
+:bfvcE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvcE"^^xsd:string .
+
+:bfvcG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvcG"^^xsd:string .
+
+:bfvcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bfvcUnrated"^^xsd:string .
+
+:bmukk10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk10"^^xsd:string .
+
+:bmukk12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk12"^^xsd:string .
+
+:bmukk14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk14"^^xsd:string .
+
+:bmukk16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk16"^^xsd:string .
+
+:bmukk6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk6"^^xsd:string .
+
+:bmukk8 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukk8"^^xsd:string .
+
+:bmukkAa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukkAa"^^xsd:string .
+
+:bmukkUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "bmukkUnrated"^^xsd:string .
+
+:catv14plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catv14plus"^^xsd:string .
+
+:catv18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catv18plus"^^xsd:string .
+
+:catvC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvC"^^xsd:string .
+
+:catvC8 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvC8"^^xsd:string .
+
+:catvG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvG"^^xsd:string .
+
+:catvPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvPg"^^xsd:string .
+
+:catvUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvUnrated"^^xsd:string .
+
+:catvfr13plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfr13plus"^^xsd:string .
+
+:catvfr16plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfr16plus"^^xsd:string .
+
+:catvfr18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfr18plus"^^xsd:string .
+
+:catvfr8plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfr8plus"^^xsd:string .
+
+:catvfrG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfrG"^^xsd:string .
+
+:catvfrUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "catvfrUnrated"^^xsd:string .
+
+:cbfcA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cbfcA"^^xsd:string .
+
+:cbfcS a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cbfcS"^^xsd:string .
+
+:cbfcU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cbfcU"^^xsd:string .
+
+:cbfcUA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cbfcUA"^^xsd:string .
+
+:cbfcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cbfcUnrated"^^xsd:string .
+
+:ccc14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ccc14"^^xsd:string .
+
+:ccc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ccc18"^^xsd:string .
+
+:ccc18s a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ccc18s"^^xsd:string .
+
+:ccc18v a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ccc18v"^^xsd:string .
+
+:ccc6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ccc6"^^xsd:string .
+
+:cccTe a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cccTe"^^xsd:string .
+
+:cccUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cccUnrated"^^xsd:string .
+
+:cceM12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM12"^^xsd:string .
+
+:cceM14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM14"^^xsd:string .
+
+:cceM16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM16"^^xsd:string .
+
+:cceM18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM18"^^xsd:string .
+
+:cceM4 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM4"^^xsd:string .
+
+:cceM6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceM6"^^xsd:string .
+
+:cceUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cceUnrated"^^xsd:string .
+
+:chfilm0 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilm0"^^xsd:string .
+
+:chfilm12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilm12"^^xsd:string .
+
+:chfilm16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilm16"^^xsd:string .
+
+:chfilm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilm18"^^xsd:string .
+
+:chfilm6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilm6"^^xsd:string .
+
+:chfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chfilmUnrated"^^xsd:string .
+
+:chvrs14a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrs14a"^^xsd:string .
+
+:chvrs18a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrs18a"^^xsd:string .
+
+:chvrsE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrsE"^^xsd:string .
+
+:chvrsG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrsG"^^xsd:string .
+
+:chvrsPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrsPg"^^xsd:string .
+
+:chvrsR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrsR"^^xsd:string .
+
+:chvrsUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "chvrsUnrated"^^xsd:string .
+
+:cicfE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cicfE"^^xsd:string .
+
+:cicfKntEna a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cicfKntEna"^^xsd:string .
+
+:cicfKtEa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cicfKtEa"^^xsd:string .
+
+:cicfUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cicfUnrated"^^xsd:string .
+
+:cna12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cna12"^^xsd:string .
+
+:cna15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cna15"^^xsd:string .
+
+:cna18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cna18"^^xsd:string .
+
+:cna18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cna18plus"^^xsd:string .
+
+:cnaAp a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnaAp"^^xsd:string .
+
+:cnaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnaUnrated"^^xsd:string .
+
+:cnc10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnc10"^^xsd:string .
+
+:cnc12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnc12"^^xsd:string .
+
+:cnc16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnc16"^^xsd:string .
+
+:cnc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cnc18"^^xsd:string .
+
+:cncE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cncE"^^xsd:string .
+
+:cncInterdiction a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cncInterdiction"^^xsd:string .
+
+:cncT a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cncT"^^xsd:string .
+
+:cncUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cncUnrated"^^xsd:string .
+
+:csa10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csa10"^^xsd:string .
+
+:csa12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csa12"^^xsd:string .
+
+:csa16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csa16"^^xsd:string .
+
+:csa18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csa18"^^xsd:string .
+
+:csaInterdiction a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csaInterdiction"^^xsd:string .
+
+:csaT a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csaT"^^xsd:string .
+
+:csaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "csaUnrated"^^xsd:string .
+
+:cscf12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscf12"^^xsd:string .
+
+:cscf16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscf16"^^xsd:string .
+
+:cscf18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscf18"^^xsd:string .
+
+:cscf6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscf6"^^xsd:string .
+
+:cscf9 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscf9"^^xsd:string .
+
+:cscfA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscfA"^^xsd:string .
+
+:cscfAl a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscfAl"^^xsd:string .
+
+:cscfUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "cscfUnrated"^^xsd:string .
+
+:czfilm12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "czfilm12"^^xsd:string .
+
+:czfilm14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "czfilm14"^^xsd:string .
+
+:czfilm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "czfilm18"^^xsd:string .
+
+:czfilmU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "czfilmU"^^xsd:string .
+
+:czfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "czfilmUnrated"^^xsd:string .
+
+:djctq10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq10"^^xsd:string .
+
+:djctq1012 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1012"^^xsd:string .
+
+:djctq1014 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1014"^^xsd:string .
+
+:djctq1016 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1016"^^xsd:string .
+
+:djctq1018 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1018"^^xsd:string .
+
+:djctq12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq12"^^xsd:string .
+
+:djctq1214 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1214"^^xsd:string .
+
+:djctq1216 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1216"^^xsd:string .
+
+:djctq1218 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1218"^^xsd:string .
+
+:djctq14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq14"^^xsd:string .
+
+:djctq1416 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1416"^^xsd:string .
+
+:djctq1418 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1418"^^xsd:string .
+
+:djctq16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq16"^^xsd:string .
+
+:djctq1618 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq1618"^^xsd:string .
+
+:djctq18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctq18"^^xsd:string .
+
+:djctqEr a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqEr"^^xsd:string .
+
+:djctqL a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL"^^xsd:string .
+
+:djctqL10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL10"^^xsd:string .
+
+:djctqL12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL12"^^xsd:string .
+
+:djctqL14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL14"^^xsd:string .
+
+:djctqL16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL16"^^xsd:string .
+
+:djctqL18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqL18"^^xsd:string .
+
+:djctqUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "djctqUnrated"^^xsd:string .
+
+:ecbmct13a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct13a"^^xsd:string .
+
+:ecbmct13plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct13plus"^^xsd:string .
+
+:ecbmct15a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct15a"^^xsd:string .
+
+:ecbmct15plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct15plus"^^xsd:string .
+
+:ecbmct18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct18plus"^^xsd:string .
+
+:ecbmct7a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct7a"^^xsd:string .
+
+:ecbmct7plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmct7plus"^^xsd:string .
+
+:ecbmctG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmctG"^^xsd:string .
+
+:ecbmctUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ecbmctUnrated"^^xsd:string .
+
+:eefilmK12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmK12"^^xsd:string .
+
+:eefilmK14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmK14"^^xsd:string .
+
+:eefilmK16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmK16"^^xsd:string .
+
+:eefilmK6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmK6"^^xsd:string .
+
+:eefilmL a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmL"^^xsd:string .
+
+:eefilmMs12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmMs12"^^xsd:string .
+
+:eefilmMs6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmMs6"^^xsd:string .
+
+:eefilmPere a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmPere"^^xsd:string .
+
+:eefilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eefilmUnrated"^^xsd:string .
+
+:egfilm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "egfilm18"^^xsd:string .
+
+:egfilmBn a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "egfilmBn"^^xsd:string .
+
+:egfilmGn a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "egfilmGn"^^xsd:string .
+
+:egfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "egfilmUnrated"^^xsd:string .
+
+:eirinG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eirinG"^^xsd:string .
+
+:eirinPg12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eirinPg12"^^xsd:string .
+
+:eirinR15plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eirinR15plus"^^xsd:string .
+
+:eirinR18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eirinR18plus"^^xsd:string .
+
+:eirinUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "eirinUnrated"^^xsd:string .
+
+:fcbm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbm18"^^xsd:string .
+
+:fcbm18pa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbm18pa"^^xsd:string .
+
+:fcbm18pl a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbm18pl"^^xsd:string .
+
+:fcbm18sg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbm18sg"^^xsd:string .
+
+:fcbm18sx a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbm18sx"^^xsd:string .
+
+:fcbmP13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbmP13"^^xsd:string .
+
+:fcbmPg13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbmPg13"^^xsd:string .
+
+:fcbmU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbmU"^^xsd:string .
+
+:fcbmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcbmUnrated"^^xsd:string .
+
+:fcoI a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoI"^^xsd:string .
+
+:fcoIi a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoIi"^^xsd:string .
+
+:fcoIia a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoIia"^^xsd:string .
+
+:fcoIib a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoIib"^^xsd:string .
+
+:fcoIii a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoIii"^^xsd:string .
+
+:fcoUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fcoUnrated"^^xsd:string .
+
+:fmoc10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmoc10"^^xsd:string .
+
+:fmoc12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmoc12"^^xsd:string .
+
+:fmoc16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmoc16"^^xsd:string .
+
+:fmoc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmoc18"^^xsd:string .
+
+:fmocE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmocE"^^xsd:string .
+
+:fmocU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmocU"^^xsd:string .
+
+:fmocUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fmocUnrated"^^xsd:string .
+
+:fpb10 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb10"^^xsd:string .
+
+:fpb1012Pg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb1012Pg"^^xsd:string .
+
+:fpb13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb13"^^xsd:string .
+
+:fpb16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb16"^^xsd:string .
+
+:fpb18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb18"^^xsd:string .
+
+:fpb79Pg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpb79Pg"^^xsd:string .
+
+:fpbA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpbA"^^xsd:string .
+
+:fpbPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpbPg"^^xsd:string .
+
+:fpbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpbUnrated"^^xsd:string .
+
+:fpbX18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpbX18"^^xsd:string .
+
+:fpbXx a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fpbXx"^^xsd:string .
+
+:fsk0 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fsk0"^^xsd:string .
+
+:fsk12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fsk12"^^xsd:string .
+
+:fsk16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fsk16"^^xsd:string .
+
+:fsk18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fsk18"^^xsd:string .
+
+:fsk6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fsk6"^^xsd:string .
+
+:fskUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "fskUnrated"^^xsd:string .
+
+:grfilmE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmE"^^xsd:string .
+
+:grfilmK a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK"^^xsd:string .
+
+:grfilmK12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK12"^^xsd:string .
+
+:grfilmK13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK13"^^xsd:string .
+
+:grfilmK15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK15"^^xsd:string .
+
+:grfilmK17 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK17"^^xsd:string .
+
+:grfilmK18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmK18"^^xsd:string .
+
+:grfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "grfilmUnrated"^^xsd:string .
+
+:icaa12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaa12"^^xsd:string .
+
+:icaa13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaa13"^^xsd:string .
+
+:icaa16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaa16"^^xsd:string .
+
+:icaa18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaa18"^^xsd:string .
+
+:icaa7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaa7"^^xsd:string .
+
+:icaaApta a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaaApta"^^xsd:string .
+
+:icaaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaaUnrated"^^xsd:string .
+
+:icaaX a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "icaaX"^^xsd:string .
+
+:ifco12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco12"^^xsd:string .
+
+:ifco12a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco12a"^^xsd:string .
+
+:ifco15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco15"^^xsd:string .
+
+:ifco15a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco15a"^^xsd:string .
+
+:ifco16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco16"^^xsd:string .
+
+:ifco18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifco18"^^xsd:string .
+
+:ifcoG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifcoG"^^xsd:string .
+
+:ifcoPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifcoPg"^^xsd:string .
+
+:ifcoUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ifcoUnrated"^^xsd:string .
+
+:ilfilm12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilm12"^^xsd:string .
+
+:ilfilm14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilm14"^^xsd:string .
+
+:ilfilm16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilm16"^^xsd:string .
+
+:ilfilm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilm18"^^xsd:string .
+
+:ilfilmAa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilmAa"^^xsd:string .
+
+:ilfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ilfilmUnrated"^^xsd:string .
+
+:incaaAtp a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaAtp"^^xsd:string .
+
+:incaaC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaC"^^xsd:string .
+
+:incaaSam13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaSam13"^^xsd:string .
+
+:incaaSam16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaSam16"^^xsd:string .
+
+:incaaSam18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaSam18"^^xsd:string .
+
+:incaaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "incaaUnrated"^^xsd:string .
+
+:kfcb16plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kfcb16plus"^^xsd:string .
+
+:kfcbG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kfcbG"^^xsd:string .
+
+:kfcbPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kfcbPg"^^xsd:string .
+
+:kfcbR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kfcbR"^^xsd:string .
+
+:kfcbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kfcbUnrated"^^xsd:string .
+
+:kijkwijzer12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzer12"^^xsd:string .
+
+:kijkwijzer16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzer16"^^xsd:string .
+
+:kijkwijzer18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzer18"^^xsd:string .
+
+:kijkwijzer6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzer6"^^xsd:string .
+
+:kijkwijzer9 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzer9"^^xsd:string .
+
+:kijkwijzerAl a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzerAl"^^xsd:string .
+
+:kijkwijzerUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kijkwijzerUnrated"^^xsd:string .
+
+:kmrb12plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrb12plus"^^xsd:string .
+
+:kmrb15plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrb15plus"^^xsd:string .
+
+:kmrbAll a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrbAll"^^xsd:string .
+
+:kmrbR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrbR"^^xsd:string .
+
+:kmrbTeenr a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrbTeenr"^^xsd:string .
+
+:kmrbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "kmrbUnrated"^^xsd:string .
+
+:lsf13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsf13"^^xsd:string .
+
+:lsf17 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsf17"^^xsd:string .
+
+:lsf21 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsf21"^^xsd:string .
+
+:lsfA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfA"^^xsd:string .
+
+:lsfBo a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfBo"^^xsd:string .
+
+:lsfD a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfD"^^xsd:string .
+
+:lsfR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfR"^^xsd:string .
+
+:lsfSu a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfSu"^^xsd:string .
+
+:lsfUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "lsfUnrated"^^xsd:string .
+
+:mccaa12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa12"^^xsd:string .
+
+:mccaa12a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa12a"^^xsd:string .
+
+:mccaa14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa14"^^xsd:string .
+
+:mccaa15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa15"^^xsd:string .
+
+:mccaa16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa16"^^xsd:string .
+
+:mccaa18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaa18"^^xsd:string .
+
+:mccaaPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaaPg"^^xsd:string .
+
+:mccaaU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaaU"^^xsd:string .
+
+:mccaaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccaaUnrated"^^xsd:string .
+
+:mccyp11 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccyp11"^^xsd:string .
+
+:mccyp15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccyp15"^^xsd:string .
+
+:mccyp7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccyp7"^^xsd:string .
+
+:mccypA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccypA"^^xsd:string .
+
+:mccypUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mccypUnrated"^^xsd:string .
+
+:mcst0 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcst0"^^xsd:string .
+
+:mcst16plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcst16plus"^^xsd:string .
+
+:mcstC13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstC13"^^xsd:string .
+
+:mcstC16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstC16"^^xsd:string .
+
+:mcstC18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstC18"^^xsd:string .
+
+:mcstGPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstGPg"^^xsd:string .
+
+:mcstP a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstP"^^xsd:string .
+
+:mcstUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mcstUnrated"^^xsd:string .
+
+:mdaG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaG"^^xsd:string .
+
+:mdaM18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaM18"^^xsd:string .
+
+:mdaNc16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaNc16"^^xsd:string .
+
+:mdaPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaPg"^^xsd:string .
+
+:mdaPg13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaPg13"^^xsd:string .
+
+:mdaR21 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaR21"^^xsd:string .
+
+:mdaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mdaUnrated"^^xsd:string .
+
+:medietilsynet11 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet11"^^xsd:string .
+
+:medietilsynet12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet12"^^xsd:string .
+
+:medietilsynet15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet15"^^xsd:string .
+
+:medietilsynet18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet18"^^xsd:string .
+
+:medietilsynet6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet6"^^xsd:string .
+
+:medietilsynet7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet7"^^xsd:string .
+
+:medietilsynet9 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynet9"^^xsd:string .
+
+:medietilsynetA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynetA"^^xsd:string .
+
+:medietilsynetUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "medietilsynetUnrated"^^xsd:string .
+
+:meku12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "meku12"^^xsd:string .
+
+:meku16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "meku16"^^xsd:string .
+
+:meku18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "meku18"^^xsd:string .
+
+:meku7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "meku7"^^xsd:string .
+
+:mekuS a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mekuS"^^xsd:string .
+
+:mekuUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mekuUnrated"^^xsd:string .
+
+:menaMpaaG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "menaMpaaG"^^xsd:string .
+
+:menaMpaaPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "menaMpaaPg"^^xsd:string .
+
+:menaMpaaPg13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "menaMpaaPg13"^^xsd:string .
+
+:menaMpaaR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "menaMpaaR"^^xsd:string .
+
+:menaMpaaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "menaMpaaUnrated"^^xsd:string .
+
+:mibacT a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacT"^^xsd:string .
+
+:mibacUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacUnrated"^^xsd:string .
+
+:mibacVap a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacVap"^^xsd:string .
+
+:mibacVm12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacVm12"^^xsd:string .
+
+:mibacVm14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacVm14"^^xsd:string .
+
+:mibacVm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mibacVm18"^^xsd:string .
+
+:moc12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moc12"^^xsd:string .
+
+:moc15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moc15"^^xsd:string .
+
+:moc18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moc18"^^xsd:string .
+
+:moc7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moc7"^^xsd:string .
+
+:mocBanned a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mocBanned"^^xsd:string .
+
+:mocE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mocE"^^xsd:string .
+
+:mocT a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mocT"^^xsd:string .
+
+:mocUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mocUnrated"^^xsd:string .
+
+:mocX a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mocX"^^xsd:string .
+
+:moctwG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwG"^^xsd:string .
+
+:moctwP a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwP"^^xsd:string .
+
+:moctwPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwPg"^^xsd:string .
+
+:moctwR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwR"^^xsd:string .
+
+:moctwR12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwR12"^^xsd:string .
+
+:moctwR15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwR15"^^xsd:string .
+
+:moctwUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "moctwUnrated"^^xsd:string .
+
+:mpaaG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaG"^^xsd:string .
+
+:mpaaNc17 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaNc17"^^xsd:string .
+
+:mpaaPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaPg"^^xsd:string .
+
+:mpaaPg13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaPg13"^^xsd:string .
+
+:mpaaR a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaR"^^xsd:string .
+
+:mpaaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaUnrated"^^xsd:string .
+
+:mpaaX a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaaX"^^xsd:string .
+
+:mpaatGb a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaatGb"^^xsd:string .
+
+:mpaatRb a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mpaatRb"^^xsd:string .
+
+:mtrcbG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbG"^^xsd:string .
+
+:mtrcbPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbPg"^^xsd:string .
+
+:mtrcbR13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbR13"^^xsd:string .
+
+:mtrcbR16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbR16"^^xsd:string .
+
+:mtrcbR18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbR18"^^xsd:string .
+
+:mtrcbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbUnrated"^^xsd:string .
+
+:mtrcbX a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "mtrcbX"^^xsd:string .
+
+:nbc12plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbc12plus"^^xsd:string .
+
+:nbc15plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbc15plus"^^xsd:string .
+
+:nbc18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbc18plus"^^xsd:string .
+
+:nbc18plusr a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbc18plusr"^^xsd:string .
+
+:nbcG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcG"^^xsd:string .
+
+:nbcPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcPg"^^xsd:string .
+
+:nbcPu a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcPu"^^xsd:string .
+
+:nbcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcUnrated"^^xsd:string .
+
+:nbcpl18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcpl18plus"^^xsd:string .
+
+:nbcplI a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcplI"^^xsd:string .
+
+:nbcplIi a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcplIi"^^xsd:string .
+
+:nbcplIii a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcplIii"^^xsd:string .
+
+:nbcplIv a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcplIv"^^xsd:string .
+
+:nbcplUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nbcplUnrated"^^xsd:string .
+
+:nfrcA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcA"^^xsd:string .
+
+:nfrcB a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcB"^^xsd:string .
+
+:nfrcC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcC"^^xsd:string .
+
+:nfrcD a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcD"^^xsd:string .
+
+:nfrcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcUnrated"^^xsd:string .
+
+:nfrcX a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfrcX"^^xsd:string .
+
+:nfvcb12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcb12"^^xsd:string .
+
+:nfvcb12a a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcb12a"^^xsd:string .
+
+:nfvcb15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcb15"^^xsd:string .
+
+:nfvcb18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcb18"^^xsd:string .
+
+:nfvcbG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcbG"^^xsd:string .
+
+:nfvcbPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcbPg"^^xsd:string .
+
+:nfvcbRe a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcbRe"^^xsd:string .
+
+:nfvcbUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nfvcbUnrated"^^xsd:string .
+
+:nkclv12plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nkclv12plus"^^xsd:string .
+
+:nkclv18plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nkclv18plus"^^xsd:string .
+
+:nkclv7plus a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nkclv7plus"^^xsd:string .
+
+:nkclvU a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nkclvU"^^xsd:string .
+
+:nkclvUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "nkclvUnrated"^^xsd:string .
+
+:oflcG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcG"^^xsd:string .
+
+:oflcM a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcM"^^xsd:string .
+
+:oflcPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcPg"^^xsd:string .
+
+:oflcR13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcR13"^^xsd:string .
+
+:oflcR15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcR15"^^xsd:string .
+
+:oflcR16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcR16"^^xsd:string .
+
+:oflcR18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcR18"^^xsd:string .
+
+:oflcRp13 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcRp13"^^xsd:string .
+
+:oflcRp16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcRp16"^^xsd:string .
+
+:oflcRp18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcRp18"^^xsd:string .
+
+:oflcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "oflcUnrated"^^xsd:string .
+
+:pefilm14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pefilm14"^^xsd:string .
+
+:pefilm18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pefilm18"^^xsd:string .
+
+:pefilmPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pefilmPg"^^xsd:string .
+
+:pefilmPt a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pefilmPt"^^xsd:string .
+
+:pefilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pefilmUnrated"^^xsd:string .
+
+:pg14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "pg14"^^xsd:string .
+
+:rcnofI a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofI"^^xsd:string .
+
+:rcnofIi a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofIi"^^xsd:string .
+
+:rcnofIii a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofIii"^^xsd:string .
+
+:rcnofIv a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofIv"^^xsd:string .
+
+:rcnofUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofUnrated"^^xsd:string .
+
+:rcnofV a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofV"^^xsd:string .
+
+:rcnofVi a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rcnofVi"^^xsd:string .
+
+:resorteviolenciaA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaA"^^xsd:string .
+
+:resorteviolenciaB a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaB"^^xsd:string .
+
+:resorteviolenciaC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaC"^^xsd:string .
+
+:resorteviolenciaD a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaD"^^xsd:string .
+
+:resorteviolenciaE a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaE"^^xsd:string .
+
+:resorteviolenciaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "resorteviolenciaUnrated"^^xsd:string .
+
+:rtcA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcA"^^xsd:string .
+
+:rtcAa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcAa"^^xsd:string .
+
+:rtcB a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcB"^^xsd:string .
+
+:rtcB15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcB15"^^xsd:string .
+
+:rtcC a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcC"^^xsd:string .
+
+:rtcD a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcD"^^xsd:string .
+
+:rtcUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtcUnrated"^^xsd:string .
+
+:rteCh a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rteCh"^^xsd:string .
+
+:rteGa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rteGa"^^xsd:string .
+
+:rteMa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rteMa"^^xsd:string .
+
+:rtePs a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rtePs"^^xsd:string .
+
+:rteUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "rteUnrated"^^xsd:string .
+
+:russia0 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russia0"^^xsd:string .
+
+:russia12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russia12"^^xsd:string .
+
+:russia16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russia16"^^xsd:string .
+
+:russia18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russia18"^^xsd:string .
+
+:russia6 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russia6"^^xsd:string .
+
+:russiaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "russiaUnrated"^^xsd:string .
+
+:skfilmG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "skfilmG"^^xsd:string .
+
+:skfilmP2 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "skfilmP2"^^xsd:string .
+
+:skfilmP5 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "skfilmP5"^^xsd:string .
+
+:skfilmP8 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "skfilmP8"^^xsd:string .
+
+:skfilmUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "skfilmUnrated"^^xsd:string .
+
+:smais12 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smais12"^^xsd:string .
+
+:smais14 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smais14"^^xsd:string .
+
+:smais16 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smais16"^^xsd:string .
+
+:smais18 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smais18"^^xsd:string .
+
+:smais7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smais7"^^xsd:string .
+
+:smaisL a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smaisL"^^xsd:string .
+
+:smaisUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smaisUnrated"^^xsd:string .
+
+:smsa11 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smsa11"^^xsd:string .
+
+:smsa15 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smsa15"^^xsd:string .
+
+:smsa7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smsa7"^^xsd:string .
+
+:smsaA a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smsaA"^^xsd:string .
+
+:smsaUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "smsaUnrated"^^xsd:string .
+
+:tvpgG a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgG"^^xsd:string .
+
+:tvpgMa a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgMa"^^xsd:string .
+
+:tvpgPg a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgPg"^^xsd:string .
+
+:tvpgUnrated a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgUnrated"^^xsd:string .
+
+:tvpgY a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgY"^^xsd:string .
+
+:tvpgY7 a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgY7"^^xsd:string .
+
+:tvpgY7Fv a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "tvpgY7Fv"^^xsd:string .
+
+:ytAgeRestricted, a skos:Concept ;
+    skos:inScheme :ContentRatings ;
+    skos:prefLabel "ytAgeRestricted,"^^xsd:string .
