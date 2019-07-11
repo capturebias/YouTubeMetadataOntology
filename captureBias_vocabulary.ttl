@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 ## Categories
@@ -985,7 +986,7 @@
 
 :YTrating a skos:Collection ;
     skos:inScheme :ContentRatings ;
-    skos:member :ytAgeRestricted, ;
+    skos:member :ytAgeRestricted ;
     skos:note "A rating that YouTube uses to identify age-restricted content."@en ;
     skos:prefLabel "ytRating:"@en .
 
@@ -2881,6 +2882,6 @@
     skos:inScheme :ContentRatings ;
     skos:prefLabel "tvpgY7Fv"^^xsd:string .
 
-:ytAgeRestricted, a skos:Concept ;
+:ytAgeRestricted a skos:Concept ;
     skos:inScheme :ContentRatings ;
-    skos:prefLabel "ytAgeRestricted,"^^xsd:string .
+    skos:prefLabel "ytAgeRestricted"^^xsd:string .
